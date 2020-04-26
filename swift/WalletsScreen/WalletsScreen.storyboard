@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wallet-->
+        <scene sceneID="AKR-PK-hEY">
+            <objects>
+                <viewController storyboardIdentifier="WalletsScreenViewController" title="Wallet" id="nzs-1d-PHw" customClass="WalletsScreenViewController" customModule="TBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yAb-pM-UOT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="63m-dT-mqS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="ZXk-Cb-c8k">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQ4-Fw-BN2">
+                                            <rect key="frame" x="20" y="20" width="335" height="100"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="7Io-Fn-FVF"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="21y-O4-q17">
+                                            <rect key="frame" x="20" y="140" width="335" height="48"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk2-bP-BNg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="157.5" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="Withdraw">
+                                                        <color key="titleColor" red="0.12549019610000001" green="0.13725490200000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="barderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="barderColor">
+                                                            <color key="value" red="0.76862745099999996" green="0.79215686269999996" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WB-UA-ttx">
+                                                    <rect key="frame" x="177.5" y="0.0" width="157.5" height="48"/>
+                                                    <color key="backgroundColor" red="0.88235294119999996" green="0.97647058819999999" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Deposit">
+                                                        <color key="titleColor" red="0.16078431369999999" green="0.83137254900000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="barderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="barderColor">
+                                                            <color key="value" red="0.16078431369999999" green="0.83137254900000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="depositBtnPressed:" destination="nzs-1d-PHw" eventType="touchUpInside" id="tQK-H1-hRO"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="wYx-Ct-o8E"/>
+                                            </constraints>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3c-E1-STn">
+                                            <rect key="frame" x="0.0" y="219" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.90588235294117647" green="0.92549019607843142" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="4Vt-Sh-a6F"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="aQ4-Fw-BN2" firstAttribute="leading" secondItem="ZXk-Cb-c8k" secondAttribute="leading" constant="20" id="3Ho-lM-oLg"/>
+                                        <constraint firstItem="21y-O4-q17" firstAttribute="leading" secondItem="ZXk-Cb-c8k" secondAttribute="leading" constant="20" id="7CQ-36-2gU"/>
+                                        <constraint firstItem="aQ4-Fw-BN2" firstAttribute="top" secondItem="ZXk-Cb-c8k" secondAttribute="top" constant="20" id="It4-zO-Ern"/>
+                                        <constraint firstAttribute="trailing" secondItem="21y-O4-q17" secondAttribute="trailing" constant="20" id="JUk-Pk-zCZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="o3c-E1-STn" secondAttribute="trailing" id="OjL-9L-Sd1"/>
+                                        <constraint firstItem="21y-O4-q17" firstAttribute="top" secondItem="aQ4-Fw-BN2" secondAttribute="bottom" constant="20" id="WGR-F3-2u3"/>
+                                        <constraint firstItem="o3c-E1-STn" firstAttribute="leading" secondItem="ZXk-Cb-c8k" secondAttribute="leading" id="ZEZ-ij-gm9"/>
+                                        <constraint firstAttribute="bottom" secondItem="o3c-E1-STn" secondAttribute="bottom" id="lPi-VF-eFF"/>
+                                        <constraint firstAttribute="trailing" secondItem="aQ4-Fw-BN2" secondAttribute="trailing" constant="20" id="wrg-Gd-fsz"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="63m-dT-mqS" firstAttribute="top" secondItem="yAb-pM-UOT" secondAttribute="top" id="H35-eZ-cjg"/>
+                            <constraint firstItem="gxR-d7-hVV" firstAttribute="bottom" secondItem="63m-dT-mqS" secondAttribute="bottom" id="OPd-Q6-Osd"/>
+                            <constraint firstItem="63m-dT-mqS" firstAttribute="leading" secondItem="gxR-d7-hVV" secondAttribute="leading" id="bOB-Ek-PCo"/>
+                            <constraint firstItem="gxR-d7-hVV" firstAttribute="trailing" secondItem="63m-dT-mqS" secondAttribute="trailing" id="jpm-Fk-YPb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gxR-d7-hVV"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="tableViewPrivate" destination="63m-dT-mqS" id="R2z-by-8qH"/>
+                        <outlet property="walletContainer" destination="aQ4-Fw-BN2" id="976-8d-ko0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNy-NB-js4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127.2" y="93.553223388305852"/>
+        </scene>
+    </scenes>
+</document>
